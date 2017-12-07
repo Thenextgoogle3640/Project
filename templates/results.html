@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html> 
+  <head>
+  <title>Price Comparison Tool</title>
+  </head>
+  <body background="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi10uD63vbXAhXC54MKHVpxAnQQjBwIBA&url=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fsupermarket-blurred-background-with-bokeh-picture-id609957362%3Fk%3D6%26m%3D609957362%26s%3D612x612%26w%3D0%26h%3D7dHABbTumphgZaw7ia-Qm2Z2xkKvrqTE3n7DQTjL9q0%3D&psig=AOvVaw3ylqQpfvQ4255m1kgFd4ox&ust=1512696279657215">
+  <h1> <b><center>Your Deals</b></center></b></h1>
+    <table style="width:100%">
+      <tr>
+        <th></th>
+        <th><font face="Arial" size="3" color="Green">Item</font></th> 
+        <th><font face="Arial" size="3" color="Green">Price </font></th>
+      </tr>
+      <tr>
+        <td><font face="Arial" size="3" color="Blue">Amazon Item: </font> </td>
+        <td> <a href= {{aurl}}>{{itemname}}</a></td> 
+        <td>{{item_info}}</td>
+      </tr>
+      <tr>
+        <td> <font face="Arial" size="3" color="Blue">Costco Item: </font></td>
+        <td> <a href= {{curl}}>{{costconame}}</a></td> 
+        <td> {{costco_info}}</td>
+      </tr>
+      <tr>
+        <td> <font face="Arial" size="3" color="Blue">Walmart Item: </font></td>
+        <td> <a href= {{wurl}}>{{walmartname}}</a> </td> 
+        <td> {{walmart_info}}</td>
+      </tr>
+    </table>
+</body>
+</html>

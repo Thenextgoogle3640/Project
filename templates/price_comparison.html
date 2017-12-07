@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html> 
+
+  <head>
+  <title>Output</title>
+  </head>
+  <body>
+  <h1> MBTA Locator</h1>
+  
+ 
+  <table>
+    {% for key, value in results.items() %}
+       <tr>
+            <th> {{ key }} </th>
+            <td> {{ value }} </td>
+       </tr>
+    {% endfor %}
+    </table>
+  
+					
+ <h3 class="Head">Station Location</h3>
+
+</body>
+</html>

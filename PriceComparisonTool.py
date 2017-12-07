@@ -5,7 +5,6 @@ from Walmartprices import getWalmartPrice
 from Amazonprices import getAmazonName
 from Amazonprices import getAmazonPrice
 
-
 def main():
     itemname = input('Product Name: ')
     curl = "https://www.costco.com/CatalogSearch?dept=All&keyword={itemname}&pageSize=96" .format(itemname=itemname)
@@ -13,12 +12,10 @@ def main():
     aurl = "https://www.amazon.com/s/ref=nb_sb_noss_2?url=srs%3D7301146011%26search-alias%3Dpantry&field-keywords={itemname}" .format(itemname=itemname)
     costconame = getCostcoName(curl)
     costcoprice = getCostcoPrice(curl)
-    walmartname = getWalmartName(wurl)
-    walmartprice = getWalmartPrice(wurl)
+    walmartinfo = getWalmartName(wurl), getWalmartPrice(wurl)
     amazonname = getAmazonName(aurl)
     amazonprice = getAmazonPrice(aurl)
-    print( ' Amazon Product Title: ' + amazonname)
-    print( ' The Amazon price is $' + amazonprice)
+    return amazonname, amazonprice, walmartname
     print(' ')
     print('-------------------------------------------------')
     print( ' Wal-Mart Product Title: ' + walmartname)
@@ -44,4 +41,17 @@ def main():
         else:
             print("Based on your search of " + itemname + ", Amazon sells " + amazonname + " at the lowest price of $" + amazonprice + ".")
 
-main()
+print ('                                 ')
+while True:
+    main()
+    while True:
+        answer = input('Run again? (yes/no): ')
+        if answer.lower() in ('yes', 'no'):
+            break
+        print ('Invalid input.')
+    if answer.lower() == 'yes':
+        print ('                                 ')
+        continue
+    else:
+        print ('Goodbye')
+        break
